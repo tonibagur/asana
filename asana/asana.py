@@ -564,6 +564,13 @@ class AsanaAPI(object):
         """
         return self._asana('workspaces/%d/tags' % workspace)
 
+    def get_tag(self, tag_id):
+        """Get tag
+
+        :param tag_id: id# of tag
+        """
+        return self._asana('tags/%d' % tag_id)
+
     def get_tag_tasks(self, tag_id):
         """Get tasks for a tag
 
